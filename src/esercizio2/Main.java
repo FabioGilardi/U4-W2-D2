@@ -31,7 +31,6 @@ public class Main {
         } else {
             logger.error("The number must be over 0!");
         }
-        myScanner.close();
     }
 
     public static List orderedNumbersTwoWay(Set set) {
