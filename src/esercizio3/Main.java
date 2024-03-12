@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Main {
     private static Logger logger = LoggerFactory.getLogger(esercizio1.Main.class);
@@ -18,7 +19,8 @@ public class Main {
         deleteContact(addressBook, "Giulia");
         searchByName(addressBook, "Fabio");
         searchByNumber(addressBook, 3000);
-        System.out.println(addressBook);
+        printAdressBook(addressBook);
+
     }
 
     public static void addContact(Map map, String name, Integer number) {
@@ -40,5 +42,12 @@ public class Main {
             }
         }
         return null;
+    }
+
+    public static void printAdressBook(Map map) {
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            logger.info("Person : " + key + "  Number: " + map.get(key));
+        }
     }
 }
