@@ -50,8 +50,8 @@ public class Main {
         setToList.addAll(set);
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type true or false");
-        String statement = myScanner.nextLine();
-        if (statement == "true") {
+        boolean statement = myScanner.nextBoolean();
+        if (statement) {
             for (int i = 0; i < setToList.size(); i++) {
                 if (i % 2 == 0) {
                     pairOdd.add(setToList.get(i));
